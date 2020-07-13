@@ -16,5 +16,36 @@ module.exports = {
   ],
   plugins: ['prettier'],
   // add your custom rules here
-  rules: {},
-}
+  rules: {
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'prettier/prettier': 'warn',
+    'spaced-comment': 'off',
+    'no-var': 'warn',
+    'prefer-const': 'warn',
+    'consistent-return': 'off',
+    'func-names': 'off',
+    'object-shorthand': 'off',
+    'no-process-exit': 'off',
+    'no-param-reassign': 'off',
+    'no-return-await': 'off',
+    'no-underscore-dangle': 'off',
+    'class-methods-use-this': 'off',
+    'prefer-destructuring': [
+      'error',
+      {
+        object: true,
+        array: false,
+      },
+    ],
+    'no-unused-vars': [
+      'warn',
+      {
+        argsIgnorePattern:
+          'req|res|next|val|err|from|to|resolve|reject|getters|commit|rootState',
+      },
+    ],
+    'no-new': 0,
+    'no-alert': 0,
+  },
+};
