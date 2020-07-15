@@ -26,3 +26,14 @@ export const actions = {
     });
   },
 };
+
+// export const actions = {
+//   async fetchEvents({ commit }) {
+//     const { data } = await EventService.getEvents();
+//     commit('SET_EVENTS', data);
+//   },
+//   async fetchEvent({ commit }, id) {
+//     const { data } = await EventService.getEvent(id);
+//     commit('SET_EVENT', data);
+//   },
+// };
