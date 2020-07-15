@@ -47,5 +47,19 @@ module.exports = {
     ],
     'no-new': 0,
     'no-alert': 0,
+    'vue/html-self-closing': 'off',
+    'vue/require-default-prop': 'off',
+    'vue/require-prop-types': 'off',
+    'vue/name-property-casing': 'off',
+    'vue/max-attributes-per-line': [
+      'error',
+      {
+        singleline: 6,
+        multiline: {
+          max: 8,
+          allowFirstLine: true,
+        },
+      },
+    ],
   },
 };
