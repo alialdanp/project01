@@ -1,3 +1,5 @@
+import EventService from './services/EventService.js';
+
 export default {
   /*
    ** Nuxt rendering mode
@@ -66,4 +68,14 @@ export default {
   build: {},
 
   loading: { color: '#39b982' },
+
+  generate: {
+    routes: () => {
+      return EventService.getEvents().then((response) => {
+        return response.data.map((event) => {
+          return '/event/' + event.id;
+        });
+      });
+    },
+  },
 };
